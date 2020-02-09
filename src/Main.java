@@ -65,11 +65,13 @@ public class Main {
         n = 13;
         for (int i = 0; i < n; i++) {  //  y
             for (int j = 0; j < n; j++) {   //  x
-//                if (n%2==1&& (j==n/2 && (i==1 || i==n-2))|| (i==n/2 && (j==1 || j==n-2))){   //jesli nieparzyste rogi
-//                    System.out.print("* ");
-                if (j+i == n/2+1){
+                if (j+i == n/2+1){          //lewy gorny bok
                     System.out.print("* ");
-                }else if (j-i == n/2-1){
+                }else if (j-i == n/2-1){        //prawy gorny bok
+                    System.out.print("* ");
+                }else if (i-j==n/2-1) {         //lewy dolnt bok
+                    System.out.print("* ");
+                }else if (j+i==n+(n/2-2)){      //prawy dolny bok
                     System.out.print("* ");
                 }else if (i==0 ||j==0 || i==n-1 || j==n-1) {   //obramowanie figury
                     System.out.print("* ");
